@@ -1,0 +1,137 @@
+CREATE TABLE [dbo].[CALIFICA](
+	[id_stand] [varchar](15) NOT NULL,
+	[ci] [int] NOT NULL,
+	[nota] [float] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id_stand] ASC,
+	[ci] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[EXPOSITOR]    Script Date: 27/11/2022 20:16:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[EXPOSITOR](
+	[ci] [int] NOT NULL,
+	[id_stand] [varchar](15) NOT NULL,
+	[salario] [float] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ci] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[JURADO]    Script Date: 27/11/2022 20:16:02 ******/
+
+CREATE TABLE [dbo].[JURADO](
+	[ci] [int] NOT NULL,
+	[areadeconocimiento] [varchar](150) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ci] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PATROCINA]    Script Date: 27/11/2022 20:16:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PATROCINA](
+	[id_patrocinador] [varchar](15) NOT NULL,
+	[id_stand] [varchar](15) NOT NULL,
+	[monto] [float] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id_patrocinador] ASC,
+	[id_stand] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PATROCINADOR]    Script Date: 27/11/2022 20:16:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PATROCINADOR](
+	[id_patrocinador] [varchar](15) NOT NULL,
+	[nombre_patrocinador] [varchar](70) NULL,
+	[telefono] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id_patrocinador] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PERSONA]    Script Date: 27/11/2022 20:16:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PERSONA](
+	[ci] [int] NOT NULL,
+	[apellido] [varchar](70) NULL,
+	[nombre] [varchar](70) NULL,
+	[sexo] [varchar](25) NULL,
+	[fechanaci] [date] NULL,
+	[nrocelular] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ci] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PRODUCTO]    Script Date: 27/11/2022 20:16:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PRODUCTO](
+	[id_producto] [varchar](15) NOT NULL,
+	[id_stand] [varchar](15) NOT NULL,
+	[nombre_pro] [varchar](70) NULL,
+	[precio] [float] NULL,
+	[descripcion] [varchar](150) NULL,
+	[stock] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id_producto] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[STAND]    Script Date: 27/11/2022 20:16:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[STAND](
+	[id_stand] [varchar](15) NOT NULL,
+	[nombre_stand] [varchar](70) NULL,
+	[notapromedio] [float] NULL,
+	[descripcion] [varchar](150) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id_stand] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[VISITANTE]    Script Date: 27/11/2022 20:16:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[VISITANTE](
+	[ci] [int] NOT NULL,
+	[correo] [varchar](50) NULL,
+	[nro_cta_bancaria] [varchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ci] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+

@@ -1,0 +1,45 @@
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[califica]') AND type in (N'U'))
+BEGIN
+drop table califica;
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[expositor]') AND type in (N'U'))
+BEGIN
+drop table expositor;
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[jurado]') AND type in (N'U'))
+BEGIN
+drop table jurado;
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[patrocina]') AND type in (N'U'))
+BEGIN
+drop table patrocina;
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[patrocinador]') AND type in (N'U'))
+BEGIN
+drop table patrocinador;
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[persona]') AND type in (N'U'))
+BEGIN
+drop table persona;
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[producto]') AND type in (N'U'))
+BEGIN
+drop table producto;
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[stand]') AND type in (N'U'))
+BEGIN
+drop table stand;
+END
+
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[visitante]') AND type in (N'U'))
+BEGIN
+drop table visitante;
+END
+
